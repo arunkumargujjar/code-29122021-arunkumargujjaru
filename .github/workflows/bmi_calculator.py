@@ -36,3 +36,9 @@ for index,row in df.iterrows():
 
 df2 = df[['Gender','HeightCm','WeightKg','BMI Category','Health Risk']]
 print(df2)
+overweight = df2.apply(lambda x : True
+            if x['BMI Category'] == "Overweight" else False, axis = 1)
+
+num_rows = len(overweight[overweight == True].index)
+print("Number of overweight persons:",num_rows)
+
