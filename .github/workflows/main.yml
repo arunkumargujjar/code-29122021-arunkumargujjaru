@@ -1,6 +1,6 @@
 name: BMI-app
 
-on: push
+on: [push]
 
 jobs:
   build:
